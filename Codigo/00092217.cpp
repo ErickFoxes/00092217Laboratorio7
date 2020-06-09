@@ -5,6 +5,7 @@
 #include "display_tools.h"
 #include "sel.h"
 #include "assembly.h"
+#include <cstdlib>
 
 int main(int argc, char *argv[])
 {
@@ -27,12 +28,14 @@ int main(int argc, char *argv[])
     cout << "Datos obtenidos correctamente\n********************\n";
 
     crearSistemasLocales(m,localKs,localbs);
+    cout << "Porque no sirveeeeeeeessss\n";
     showKs(localKs); showbs(localbs);
     cout << "******************************\n";
 
     zeroes(K,3*m.getSize(NODES));
     zeroes(b,3*m.getSize(NODES));
     ensamblaje(m,localKs,localbs,K,b);
+    cout << "Porque no sirveeeeeeeessss\n";
     showMatrix(K); showVector(b);
     cout << "******************************\n";
     //cout << K.size() << " - "<<K.at(0).size()<<"\n";
@@ -51,6 +54,6 @@ int main(int argc, char *argv[])
     showVector(T);
 
     writeResults(m,T,filename);
-
+    system("PAUSE");
     return 0;
 }
